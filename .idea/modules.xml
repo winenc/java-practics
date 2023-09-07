@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/first-prac/first-prac.iml" filepath="$PROJECT_DIR$/first-prac/first-prac.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/java-practics.iml" filepath="$PROJECT_DIR$/.idea/java-practics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/second-prac/second-prac.iml" filepath="$PROJECT_DIR$/second-prac/second-prac.iml" />
+      <module fileurl="file://$PROJECT_DIR$/third-prac/third-prac.iml" filepath="$PROJECT_DIR$/third-prac/third-prac.iml" />
+    </modules>
+  </component>
+</project>
