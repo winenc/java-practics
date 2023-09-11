@@ -26,7 +26,7 @@ public class Main {
 //        Solve.ex3(arr,size);
 //        Solve.ex4(arr,size);
 //        Solve.ex5(args);
-//        Solve.ex6();
-        Solve.ex7(5);
+        Solve.ex6();
+//       Solve.ex7(5);
     }
 }

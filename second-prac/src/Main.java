@@ -1,19 +1,38 @@
 /*Задания на практическую работу № 2
         1. По диаграмме класса UML описывающей сущность Автор.
-        Необходимо написать программу, которая состоит из двух классов Author и
-        TestAuthor. Класс Author должен содержать реализацию методов,
+        Необходимо написать программу, которая состоит из двух классов Author.Author и
+        TestAuthor. Класс Author.Author должен содержать реализацию методов,
         представленных на диаграмме класса на рисунке 2.4.
-        Author
+        Author.Author
         -name:String
         -email:String
         -gender:char
         ---------
-        Author(name:String,email:String,gender:char)
+        Author.Author(name:String,email:String,gender:char)
         +get name():String
         +get-email():String
         +set-email(email:String):void
         +get gender():char
         +to-string():String
+
+        2. По диаграмме UML  класса, представленной на рисунке 2.5 написать программу которая
+        состоит из двух классов. Один из них Ball.Ball должен реализовать сущность мяча,
+        а другой Ball.testBall должен тестировать работу созданного класса. Класс Ball.Ball должен содержать
+        реальзацию методов , представленных на UML. Диаграмма на рисунке описывает сущность мяч
+        написать программу. Класс Ball.Ball моделирует движущийся мяч.
+        Ball.Ball
+        -x:double = 0.0
+        -y:double = 0.0
+        +Ball.Ball(x:double,y:double)
+        +Ball.Ball()
+        +getX():double
+        +setX(x:double):void
+        +getY():double
+        +setY(y:double):void
+        +setXY(x:double,y:double):void
+        +move(xDisp:double, yDisp:double):void
+        +toString():String
+
         3. Создать класс точка Point, описывающий точку на плоскости. Создать
 Circle класс, в котором одно поле представляет точку – центр окружности, и
 добавить другие свойства, позволяющие задать точку на плоскости. Создать
@@ -36,7 +55,6 @@ ToString, который возвращает описание экземпля�
 объектов собаки.
         6. Создать класс, описывающий модель окружности (Circle). В классе
 должны быть описаны нужные свойства окружности и методы для получения и
-22
 изменения этих свойств. Добавить методы для расчета площади круга и длины
 окружности, а также метод позволяющий сравнивать две окружности. При
 помощи класса CircleTest, содержащего статический метод main(String[] args),
@@ -61,8 +79,86 @@ ToString, который возвращает описание экземпля�
 пустой строкой.
         10. Напишите программу HowMany.java, которая определит, сколько
 слов Вы ввели с консоли */
+
+
+import Author.Author;
+import Author.testAuthor;
+import Ball.testBall;
+import Circle.testCircle;
+import Poker.Poker;
+import Shop.Shop;
+import Shop.Computer;
+
+import java.util.Scanner;
+
 public class Main {
+
+    public static void HowMany()
+        {
+            Scanner in = new Scanner(System.in);
+
+            String str = new String(in.nextLine().trim());
+            int count = 0;
+            if(in.hasNext())
+            {
+                count++;
+            }
+            for (int i = 0; i < str.length(); i++)
+            {
+                if(str.charAt(i) == ' ')
+                    count++;
+            }
+            System.out.println(count);
+        }
+
+    public static void mirror(String[] arr)
+    {
+        for(int i = 0; i< arr.length/2;i++)
+        {
+            String swap = arr[i];
+            arr[i] = arr[arr.length-i-1];
+            arr[arr.length-i-1] = swap;
+        }
+    }
+    public static void ans()
+    {
+        System.out.println("\t\t\tAuthor\n");
+        testAuthor.start();
+
+        System.out.println("\n\n\n\t\t\tBall\n");
+        testBall.start();
+
+        System.out.println("\n\n\n\t\t\tCircle\n");
+        testCircle.start();
+
+        //Huawei intel RTX3060ti
+        //HyperX Amd 1660s
+        //Xiaomi intel none
+        //MSI Amd RTX2050
+        Shop.testShop();
+
+    }
+    public static void testMirror(String[] args)
+    {
+        //java Main A r g e n t i n a   m a n i t   n e g r a
+        mirror(args);
+
+        for (int i = 0;i<args.length;i++)
+        {
+            System.out.print(args[i]);
+        }
+    }
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+//        ans()
+//        ;
+//        testMirror(args);
+
+        Poker p = new Poker();
+        p.play();
+
+       HowMany();
+
+
     }
 }

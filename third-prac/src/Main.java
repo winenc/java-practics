@@ -1,4 +1,7 @@
 /*Задания на практическую работу № 3
+
+        1,3,4 зададния на классы и оболочки:
+        1 задание полностью без таблицы, задания на форматирование строк.
         Задания на Math и Random
         1. Создать массив вещественных чисел случайным образом, вывести его
         на экран, отсортировать его, и снова вывести на экран (использовать два
@@ -92,8 +95,27 @@
         4) Используйте форматирование строк. Пусть salary будет
         выровнено по правому краю, десятичное значение имеет 2 знака после
         запятой и можете добавить что-нибудь свое.  */
+
+
+import FirstEx.FirstEx;
+import SecondEx.SecondEx;
+import ThirdEx.ThirdEx;
+
+import java.util.ArrayList;
+import java.util.Random;
+
 public class Main {
+
+
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+//        FirstEx ex1 = new FirstEx(5);
+//        ex1.start();
+//        SecondEx ex2 = new SecondEx();
+//        ex2.start();//1/13 1/8 1/18 1/18 1/11 1/30 1/3 (~~7%)
+        ThirdEx ex3 = new ThirdEx();
+        ex3.start();
+
+
     }
 }

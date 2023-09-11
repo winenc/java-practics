@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Solve {
@@ -66,7 +67,7 @@ public class Solve {
         if(type == 1)
         {
             // min
-            ans = 100000;
+            ans = Integer.MAX_VALUE;
             for(int i = 0;i<s;i++)
             {
                 if(arr[i]<ans)ans=arr[i];
@@ -75,7 +76,7 @@ public class Solve {
         if(type == 2)
         {
             //max
-            ans = -100000;
+            ans = -Integer.MAX_VALUE;
             for(int i = 0;i<s;i++)
             {
                 if(arr[i]>ans)ans=arr[i];
@@ -84,11 +85,11 @@ public class Solve {
         }
         return ans;
     }
-    private static float garmoRyad(float q) {
+    private static double garmoRyad(double q) {
         if(q == 1)
             return 1;
         else
-            return ((1/q) + garmoRyad(q-1));
+            return ((double) (1/q) + garmoRyad(q-1));
     }
 
     private static int factorial(int num)
@@ -118,10 +119,15 @@ public class Solve {
     }
     public static void ex6()
     {
+//        DecimalFormat dF = new DecimalFormat("#.###");
+//        System.out.printf(dF.format(garmoRyad(10)));
+        double d;
+        d = garmoRyad(10);
         System.out.println(garmoRyad(10));
+        System.out.printf("%.1f", d);
     }
-    public static void ex7(int num)
-    {
-        System.out.println(factorial(num));
-    }
+//    public static void ex7(int num)
+//    {
+//        System.out.println(factorial(num));
+//    }
 }
