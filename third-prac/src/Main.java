@@ -97,24 +97,40 @@
         запятой и можете добавить что-нибудь свое.  */
 
 
-import FirstEx.FirstEx;
-import SecondEx.SecondEx;
-import ThirdEx.ThirdEx;
+import MiniApp.MiniApp;
 
-import java.util.ArrayList;
-import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
+    public static void fourthEx() {
+        Scanner in = new Scanner(System.in);
+        Double varD = Double.valueOf(  Double.parseDouble("0.1234")  );
+        float f = varD.floatValue();
+        int n = varD.intValue();
+        long l = varD.longValue();
+        String str = String.valueOf(varD.toString());
+        System.out.println(varD);
 
+        System.out.println(Double.toString(0.987));
 
+    }
+    public static void fifthOneEx()
+    {
+        MiniApp market = new MiniApp();
+        market.start();
+    }
 
     public static void main(String[] args) {
 //        FirstEx ex1 = new FirstEx(5);
 //        ex1.start();
 //        SecondEx ex2 = new SecondEx();
 //        ex2.start();//1/13 1/8 1/18 1/18 1/11 1/30 1/3 (~~7%)
-        ThirdEx ex3 = new ThirdEx();
-        ex3.start();
+//        ThirdEx ex3 = new ThirdEx();
+//        ex3.start();
+
+//        fourthEx();
+
+        fifthOneEx();
 
 
     }

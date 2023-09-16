@@ -8,6 +8,8 @@ package ThirdEx;
          вывести его на экран.
          */
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class ThirdEx {
@@ -23,12 +25,22 @@ public class ThirdEx {
         {
             flag = true;
             System.out.print("Введите натуральное число, размер массива: ");
-            this.n = in.nextInt();
-            if(n <= 0) {
+            str = in.nextLine();
+            if(!checkInt(str)) {
+                str = "-1";
+
+            }
+            if((Integer.parseInt(str) < 0)) {
                 System.out.println("Ошибка ввода.");
+                str = "0";
+                flag = false;
+            }
+            if((Integer.parseInt(str) == 0)) {
+                System.out.println("Массив не будет создан");
                 flag = false;
             }
         }while (!flag);
+        this.n = Integer.parseInt(str);
         arr = new int[n];
         int countChet = 0;
         for (int i = 0; i < arr.length; i++)
@@ -53,6 +65,41 @@ public class ThirdEx {
         }
     }
 
+    private static boolean recursiveCheckNum(String str)
+    {
+
+        boolean flag = false;
+        char[] num = {'.', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+        if(str.length() == 1) {
+            for (char c:num) {
+                if(c == str.charAt(0)) {
+                    return true;
+                }
+            }
+        }
+
+        if(!str.isEmpty()) {
+                return recursiveCheckNum(String.valueOf(str.charAt(0))) && recursiveCheckNum(str.substring(1));
+        }
+        return false;
+    }
+    private static boolean checkInt(String str)
+    {
+        boolean flag = false;
+        char[] num = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+        for (char s:str.toCharArray())
+        {
+            for (char n:num)
+            {
+                if(s == n) {
+                    flag = true;
+                    break;
+                }
+            }
+        }
+        return flag;
+    }
+
     public void displayArr()
     {
         for (int j : arr) {
@@ -73,5 +120,12 @@ public class ThirdEx {
         this.displayChetArr();
 
     }
+
+    public static void main(String[] args) {
+
+        Double varD = Double.valueOf("0.1");
+        System.out.println(recursiveCheckNum("12345"));
+    }
+
 
 }
