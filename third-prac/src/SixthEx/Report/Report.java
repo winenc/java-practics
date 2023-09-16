@@ -10,8 +10,8 @@ public class Report {
 
         int num=1;
         for (Employee e:person) {
-            System.out.printf("%-35s%-9s", num+". "+e.getFullname(),"    :    ");
-            System.out.printf("%-10s",String.format("%.0f", e.getSalary()));
+            System.out.printf("%-35s%-9s", num+". "+e.getFullname(),"   :   ");
+            System.out.printf("%8s",String.format("%.0f", e.getSalary()));
             System.out.println();
             num++;
         }

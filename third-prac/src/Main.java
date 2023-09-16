@@ -97,6 +97,9 @@
         запятой и можете добавить что-нибудь свое.  */
 
 
+import FirstEx.FirstEx;
+import SecondEx.SecondEx;
+import ThirdEx.ThirdEx;
 import MiniApp.MiniApp;
 
 import java.util.Scanner;
@@ -129,7 +132,7 @@ public class Main {
 //        ex3.start();
 
 //        fourthEx();
-
+//
         fifthOneEx();
 
 

@@ -152,12 +152,12 @@ public class Main {
 
 //        ans()
 //        ;
-//        testMirror(args);
+        testMirror(args);
+//
+//        Poker p = new Poker();
+//        p.play();
 
-        Poker p = new Poker();
-        p.play();
-
-       HowMany();
+//       HowMany();
 
 
     }
